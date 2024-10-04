@@ -4,83 +4,111 @@
     
 }
 
-header{
-    background-color: rgb(135, 215, 235);
+/* contenido del nav*/
 
-}
-#navegador{
-    justify-content: flex-end;
-}
-@media (max-width:320px){
-    .titulo{
-        text-align: left;
-        font-size: 20px;
-        
-    }
-}
-.titulo{
-    color: rgb(122, 113, 58);
-    font-family:"Playfair Display", serif ;
-    border: black;
-    font-size: 40px;
-    position: relative;
-    left:50px;
-    top: 30px
-    
-}
-.escudo{
-     width: 100px;
-     
-     }
-
-.barra{
-text-align: right;
-display: inline-block;
-position: relative;
-left:1000px;
-padding-left: 5px;
-bottom: 50px
-
-}
-nav{
-    height: 50px;
-    display: inline-block;
-    font-size: 30px;
-    height: 100px;
-}
-a{
+.elements{
     border-style: none;
     list-style-type: none;
     text-decoration: none;
     color:white;
+    margin-left: 20px;
     position: relative;
-    top:40px
+    right: 20px;
 }
 
-main{background-image: url(https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-abstracto-blanco-mas-de-68-imagenes.-imagen-blancos.jpg);
+header{display: flex;
+    min-height: 100px;
+    background-color: rgb(135, 215, 235);
+    justify-content: space-between;
+    align-items: center;
+
 }
+
+.escudo{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.barra{
+    display: flex;
+}
+/*para hacer el nav responsive*/
+
+@media (max-width:320px){
+    header{
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    .tituloPrincipal{
+      font-size: 20px;
+      position: relative;
+      top:20px
+
+    }
+
+}
+
+/* imagen de fondo*/
+body{background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.index{
+    height: 800px;
+}
+/* contenido del index*/
 
 .fotoSeleccion{
-    height: 800px;
-    width: 1000px;
+    height: 600px;
+    width: 800px;
 }
 #descripcion{
     color: rgb(104, 98, 39) ;
     display: flex;
     flex-direction: column;
     font-size: 30px;
+    text-align: center;
+    font-size: 40px;
 }
 .mainPage{
     flex-direction: row;
-    display:flex
+    display:flex;
+    position: relative;
+    top:50px
 }
 .bienvenida{
     font-size: 50px;
     color: rgb(104, 94, 39);
 }
+/*main responsive*/
+
+@media(max-width:320px){
+    .fotoSeleccion{
+        width: 320px;
+        height:200px
+    }
+    .mainPage{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #descripcion{
+        font-size: 10px;
+    }
+}
+/* footer*/
+
 footer{
-    height: 100px;
-    background-color: rgb(135, 215, 235)
+    min-height: 200px;
+    background-color: rgb(135, 215, 235);
 }
 
 .leyenda{
@@ -96,13 +124,49 @@ footer{
     gap: 20px;
 
 }
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 100px;
+    position: relative;
+    top:50px
+}
+
+/*footer responsive*/
+
+@media(max-width:320px){
+
+    footer{
+        width:320px;
+        height: 100px;
+    }
+    .iconos{
+        flex-direction: row ;
+    }
+    .leyenda{
+        font-size: 10px;
+        text-align: center;
+    }
+    .iconos img{
+        width:30px;
+        position: relative;
+        top:80px;
+        left:30px
+
+    }
+}
 
 /*galeria*/
 
+/* titulo*/
 .galeria{
     font-size: 100px;
     color:rgb(134, 120, 36)
 }
+
+/* posicion de las fotos*/
+
 #fotos1{display: flex;
     flex-direction: row ;
     justify-content: center;
@@ -110,11 +174,12 @@ footer{
     text-align: center
     
 }
+/* tamaño de las fotos*/
 .imagenes{
     width:500px;
     height: 400px;
 }
-
+/* posicion de los videos*/
 .video {
     display: flex;
     justify-content: space-between;
@@ -122,19 +187,19 @@ footer{
     gap: 20px;
     margin-top: 50px;
 }
-
+/* posicion de la descripcion de los videos*/
 .video-item {
     display: flex;
     flex-direction: column; 
     align-items: center; 
     text-align: center;
 }
-
+/* tamaño del frame*/
 iframe {
     max-width: 100%;
 }
 
-
+/* lugar del caption*/
 .caption {
     margin-top: 10px;
     font-size: 20px;
@@ -144,16 +209,30 @@ iframe {
 
 /*jugadores*/
 
-
+/* Titulos*/
 .jugadores{
     font-size: 100px;
     color:rgb(134, 120, 36)
+}
+
+/*titulo respondive*/
+
+@media (max-width:320px){
+    .jugadores{
+        text-align: center;
+        font-size: 50px;
+    }
+    .plantel{
+        font-size: 40px;
+        text-align: center;
+    }
 }
 .plantel{
     font-size: 50px;
     color:rgb(134, 120, 36);
     text-decoration: underline;
 }
+/* posicion de las 3 secciones de fotos*/
 #secciones{
     display: flex;
     flex-wrap: wrap;
@@ -162,6 +241,7 @@ iframe {
     margin-top: 50px;
     
 }
+/* posicion de las fotos*/
 .players{
     display: flex;
     flex-direction: column;
@@ -169,14 +249,14 @@ iframe {
     text-align: center;
     max-width: 300px
 }
-
+/* estilo de las fotos*/
 .perfil{
     width: 300px; 
     height: 300px;
     object-fit: cover;
     border-radius: 8px; 
 }
-
+/* Estilo de la descripcion de las fotos*/
 .datos{
     list-style: none; 
     padding: 0;
@@ -185,12 +265,14 @@ iframe {
     display: flex;
     flex-direction: column;
 }
+/* posisicion entre datos y listas*/
 .datos li {
     margin-bottom: 30px; 
 }
 
 /*partidos*/
 
+/* titulos*/
 .partidos{
     font-size: 100px;
     color:rgb(134, 120, 36)
@@ -205,6 +287,7 @@ iframe {
     display: flex;
    justify-content: space-evenly;
 }
+/* grid de los grupos*/
 .headGroup{
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -218,6 +301,7 @@ iframe {
     padding: 20px;
     border-radius: 4px;
 }
+/* estilo del contenido de las celdas*/
 .celda{
     padding: 10px;
     border: 1px solid;
@@ -235,7 +319,7 @@ iframe {
     object-fit: cover;
     margin-right: 10px;
 }
-
+/* estilo del contenido de los partidos*/
 .contenedor{
     display: flex;
     justify-content: space-evenly;
@@ -243,26 +327,101 @@ iframe {
     right: 200px;
     gap:20px
 }
+/* estilo de los titulos*/
 .titulos_espaciados{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-#partidob{
-    padding-right: 400px;
+#partidoa{
+    display: flex;
+    position: relative;
+    right: 250px;
 }
 
+#partidob{
+    display: flex;
+    position: relative;
+    right: 100px;
+}
+/* grid de los partidos*/
 .cabeza{
     display: grid;
-    grid-template-columns: 50px 50px 200px 100px;
+    grid-template-columns: 50px 50px 300px 100px;
     border:1px solid black;
+    text-align: center;
+
 }
+/* estilo de las celdas*/
 .columna-1{
     border: 1px solid black;
     display: grid;
+    font-weight: bold;
+    text-align: center;
 }
 .agrupacion{
     border: 1px solid black;
     display: grid;
 }
+.contenedor2{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 100px;
+}
+/**titulo fase final*/
+#fasefinal{
+    margin-top: 50px;
+}
+/**seccion de los cuadros de eliminatorias*/
+.cuadroFinal{
+display: flex;
+justify-content: space-evenly;
+position: relative;
+right: 100px;
+margin-top: 50px;
+}
 
+.fases{
+    color:rgb(134, 120, 36);
+    text-decoration: underline;
+    font-size: 30px;
+}
+/**seccion de los cuadros finales*/
+
+.cuadrosFinales{
+    display: grid;
+    grid-template-columns: 150px 30px;
+    border: 1px solid black;
+}
+
+.cuartos, .Semifinal, .final{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-right:none ;
+    max-width: 200px ;
+    margin-top: 15px;
+}
+
+
+.Semifinal{
+    display: flex;
+    position: relative;
+    left: 60px;
+    margin-top: 15px;
+}
+
+.final{
+    display: flex;
+    position: relative;
+    top:70px
+}
+
+.todosCuadros{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    right: 90px;
+}
+/*estilo de la parte de contacto*/
 
