@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding:0;
+    
+}
+
+/*contenido del header*/
+
+header{display: flex;
+    min-height: 100px;
+    background-color: rgb(135, 215, 235);
+    align-items: center;
+
+}
+
+.barra{
+    display: flex;
+    align-items: center;
+}
+.escudo{
+    height: 50px;
+}
+
+.tituloPrincipal{
+    color:rgb(134, 120, 36)
+}
+
+/* contenido del nav*/
+
+.nav-link{
+    color: white;
+    font-size: 30px;
+}
+
+
+
+/* imagen de fondo y tipo de letra*/
+body{background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif ;
+}
+
+/* contenido del main*/
+
+.fotoSeleccion{
+    height: 600px;
+    width: 800px;
+    border-radius: 8px;
+}
+#descripcion{
+    color: rgb(104, 98, 39) ;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+.mainPage{
+    flex-direction: row;
+    display:flex;
+    position: relative;
+    top:20px;
+}
+.bienvenida{
+    font-size: 50px;
+    color: rgb(104, 94, 39);
+}
+
+
+/* footer*/
+
+footer{
+    min-height: 200px;
+    background-color: rgb(135, 215, 235);
+    margin-top: 30px;
+}
+
+.leyenda {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;   
+    position: relative; 
+    top:50px
+}
+
+
+.iconos {
+    display: flex;
+    flex-direction: row;       
+    justify-content: flex-end;   
+    gap: 20px;                 
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 100px;
+  
+}
+
+
+
+/* Adaptación para móviles */
+
+/*header*/
+
+@media (max-width: 480px) {
+    header {
+        justify-content: center; 
+        flex-direction: column;  
+    }
+
+    .barra {
+        flex-direction: column;  
+        align-items: center;     
+        gap: 10px;               
+    }
+
+    .escudo {
+        height: 40px;            
+    }
+
+    .tituloPrincipal {
+        font-size: 30px;         
+        text-align: center;      
+    }
+}
+/*main*/
+
+@media(max-width:480px){
+    .fotoSeleccion{
+        width: 100%;
+        height:auto
+    }
+    .mainPage{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #descripcion{
+        font-size: 15px;
+    }
+}
+
+/*footer */
+
+@media (max-width: 480px) {
+    footer {
+        display: flex;
+        flex-direction: column;  
+        align-items: center; 
+
+    }
+
+    .iconos {
+        justify-content: center;
+        gap: 10px;               
+        position: static;        
+    }
+   .contenedorFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   }
+
+   .leyenda{
+    position: static
+   }
+
+}
+
+
+
+
