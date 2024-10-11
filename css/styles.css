@@ -1,0 +1,600 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*contenido del header*/
+header {
+  display: flex;
+  min-height: 100px;
+  background-color: rgb(135, 215, 235);
+  align-items: center;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+}
+
+.escudo {
+  height: 50px;
+}
+
+.tituloPrincipal {
+  color: rgb(134, 120, 36);
+}
+
+/* contenido del nav*/
+.nav-link {
+  color: white;
+  font-size: 30px;
+}
+
+/* imagen de fondo y tipo de letra*/
+body {
+  background-image: url("../imagenes/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* contenido del main*/
+.fotoSeleccion {
+  height: 600px;
+  width: 800px;
+  border-radius: 8px;
+}
+
+#descripcion {
+  color: rgb(104, 98, 39);
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.mainPage {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  top: 20px;
+}
+
+.bienvenida {
+  font-size: 50px;
+  color: rgb(104, 94, 39);
+}
+
+/* footer*/
+footer {
+  min-height: 200px;
+  background-color: rgb(135, 215, 235);
+  margin-top: 30px;
+}
+
+.leyenda {
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+}
+
+.iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+/* Adaptación para móviles */
+/*header*/
+@media (max-width: 480px) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .barra {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .escudo {
+    height: 40px;
+  }
+  .tituloPrincipal {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+/*main*/
+@media (max-width: 480px) {
+  .fotoSeleccion {
+    width: 100%;
+    height: auto;
+  }
+  .mainPage {
+    display: flex;
+    flex-direction: column;
+  }
+  #descripcion {
+    font-size: 15px;
+  }
+}
+/*footer */
+@media (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconos {
+    justify-content: center;
+    gap: 10px;
+    position: static;
+  }
+  .contenedorFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .leyenda {
+    position: static;
+  }
+}
+/*galeria*/
+/* titulo*/
+.galeria {
+  font-size: 80px;
+  color: rgb(134, 120, 36);
+}
+
+/* posicion de las fotos*/
+#fotos {
+  display: flex;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* tamaño de las fotos*/
+.imagenes {
+  width: 500px;
+  height: 400px;
+}
+
+/* posicion de los videos*/
+.video {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* posicion de la descripcion de los videos*/
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* tamaño del frame*/
+iframe {
+  max-width: 100%;
+}
+
+/* lugar del caption*/
+.caption {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* posicion de las 3 secciones de fotos*/
+#secciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* posicion de las fotos*/
+.players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* estilo de las fotos*/
+.perfil {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Estilo de la descripcion de las fotos*/
+.datos {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* posisicion entre datos y listas*/
+.datos li {
+  margin-bottom: 30px;
+}
+
+/*pagina responsive*/
+@media (max-width: 480px) {
+  .galeria {
+    text-align: center;
+  }
+  #fotos {
+    flex-direction: column;
+  }
+  .imagenes {
+    width: 100%;
+    height: auto;
+  }
+  .video {
+    flex-direction: column;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+/*jugadores*/
+/* Titulos*/
+.jugadores {
+  font-size: 80px;
+  color: rgb(134, 120, 36);
+}
+
+.plantel {
+  font-size: 50px;
+  color: rgb(134, 120, 36);
+  text-decoration: underline;
+}
+
+/* posicion de las 3 secciones de fotos*/
+#secciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* posicion de las fotos*/
+.players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* estilo de las fotos*/
+.perfil {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Estilo de la descripcion de las fotos*/
+.datos {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* posisicion entre datos y listas*/
+.datos li {
+  margin-bottom: 30px;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 480px) {
+  .jugadores {
+    text-align: center;
+    font-size: 50px;
+  }
+  .plantel {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+/*partidos*/
+/* titulos*/
+.partidos {
+  font-size: 80px;
+  color: rgb(134, 120, 36);
+}
+
+.partidoTitulo {
+  font-size: 50px;
+  color: rgb(134, 120, 36);
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+/* grid de los grupos*/
+.headGroup {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100px;
+  text-align: center;
+}
+
+.grupo {
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* estilo del contenido de las celdas*/
+.celda {
+  padding: 10px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.celda img {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* estilo del contenido de los partidos*/
+.contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  max-width: 100%;
+  position: relative;
+  right: 230px;
+}
+
+#grupo1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo2 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* estilo de los titulos*/
+.titulos_espaciados {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  position: relative;
+}
+
+/* grid de los partidos*/
+.cabeza {
+  display: grid;
+  grid-template-columns: 50px 50px 300px 100px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* estilo de las celdas*/
+.columna-1 {
+  border: 1px solid black;
+  display: grid;
+  font-weight: bold;
+  text-align: center;
+}
+
+.agrupacion {
+  border: 1px solid black;
+  display: grid;
+}
+
+.contenedor2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/**titulo fase final*/
+#fasefinal {
+  margin-top: 50px;
+}
+
+/**seccion de los cuadros de eliminatorias*/
+.cuadroFinal {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  right: 125px;
+  margin-top: 50px;
+}
+
+.fases {
+  color: rgb(134, 120, 36);
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+/**seccion de los cuadros finales*/
+.cuadrosFinales {
+  display: grid;
+  grid-template-columns: 150px 30px;
+  border: 1px solid black;
+}
+
+.cuartos, .Semifinal, .final {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-right: none;
+  max-width: 200px;
+  margin-top: 15px;
+}
+
+.Semifinal {
+  display: flex;
+  position: relative;
+  left: 60px;
+  margin-top: 15px;
+}
+
+.final {
+  display: flex;
+  position: relative;
+  top: 70px;
+}
+
+.todosCuadros {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  right: 90px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  .partidos {
+    text-align: center;
+    font-size: 50px;
+  }
+  .partidoTitulo {
+    text-align: center;
+    font-size: 40px;
+  }
+  .posicionTitulo {
+    font-size: 30px;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .celda img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    margin-right: 5px;
+  }
+  .headGroup {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    width: 100%;
+  }
+  .celda {
+    font-size: 10px; /* Reducir el tamaño de fuente */
+  }
+  #grupo1, .grupo2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .grupo {
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+.mapa {
+  height: 400px;
+  width: 600px;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-areas: "bloque_1" "bloque_2";
+  grid-template-columns: 2fr 1fr;
+}
+
+.bloque_1, .bloque_2 {
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.comentario {
+  width: 300px;
+  height: 200px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+h2 {
+  color: rgb(134, 120, 36);
+  font-size: 50px;
+}
+
+p {
+  margin-top: 20px;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 480px) {
+  .contenedor {
+    grid-template-areas: "bloque_1" "bloque_2";
+    grid-template-columns: 1fr;
+  }
+  .mapa {
+    height: 200px;
+    width: 100%;
+  }
+  h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .comentario {
+    width: 100%;
+    height: 150px;
+  }
+  p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .btn {
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

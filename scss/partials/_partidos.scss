@@ -1,0 +1,225 @@
+/*partidos*/
+
+/* titulos*/
+.partidos{
+  font-size: 80px;
+  color:rgb(134, 120, 36)
+}
+
+.partidoTitulo{
+  font-size: 50px;
+  color:rgb(134, 120, 36);
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  
+}
+
+
+
+/* grid de los grupos*/
+.headGroup{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  width: 100px;
+  text-align: center;
+ 
+
+}
+.grupo{
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
+
+/* estilo del contenido de las celdas*/
+.celda{
+  padding: 10px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  gap: 5px; 
+  border-radius: 4px;
+  font-weight: bold
+}
+
+.celda img {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+/* estilo del contenido de los partidos*/
+.contenedor{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  max-width: 100%;
+  position: relative;
+  right: 230px;
+}
+
+#grupo1{
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo2{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* estilo de los titulos*/
+.titulos_espaciados{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  position: relative;
+  
+}
+
+
+/* grid de los partidos*/
+.cabeza{
+  display: grid;
+  grid-template-columns: 50px 50px 300px 100px;
+  border:1px solid black;
+  text-align: center;
+
+}
+/* estilo de las celdas*/
+.columna-1{
+  border: 1px solid black;
+  display: grid;
+  font-weight: bold;
+  text-align: center;
+}
+.agrupacion{
+  border: 1px solid black;
+  display: grid;
+}
+.contenedor2{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/**titulo fase final*/
+#fasefinal{
+  margin-top: 50px;
+}
+/**seccion de los cuadros de eliminatorias*/
+.cuadroFinal{
+display: flex;
+justify-content: space-evenly;
+position: relative;
+right: 125px;
+margin-top: 50px;
+}
+
+.fases{
+  color:rgb(134, 120, 36);
+  text-decoration: underline;
+  font-size: 30px;
+}
+/**seccion de los cuadros finales*/
+
+.cuadrosFinales{
+  display: grid;
+  grid-template-columns: 150px 30px;
+  border: 1px solid black;
+}
+
+.cuartos, .Semifinal, .final{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-right:none ;
+  max-width: 200px ;
+  margin-top: 15px;
+}
+
+
+.Semifinal{
+  display: flex;
+  position: relative;
+  left: 60px;
+  margin-top: 15px;
+}
+
+.final{
+  display: flex;
+  position: relative;
+  top:70px
+}
+
+.todosCuadros{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  right: 90px;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  .partidos{
+    text-align: center;
+    font-size: 50px;
+  }
+  .partidoTitulo{
+      text-align: center;
+      font-size: 40px;
+  }
+  .posicionTitulo{
+      font-size: 30px;
+  }
+  .contenedor{
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap:20px;
+     width:100%;   
+     padding: 0 10px
+      
+  }
+  
+  .celda img {
+      width: 20px; 
+      height: 15px; 
+      object-fit: cover;
+      margin-right: 5px;
+  }
+
+  .headGroup{
+      display: grid;
+      grid-template-columns: repeat(7, 1fr); 
+      gap: 5px; 
+      text-align: center;
+      width: 100%; 
+      
+  }
+
+  .celda{
+      font-size: 10px; /* Reducir el tamaño de fuente */
+  }
+  
+  #grupo1, .grupo2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .grupo {
+      font-weight: bold;
+      font-size: 12px;
+  }
+
+  
+}
