@@ -10,6 +10,7 @@ header {
   min-height: 100px;
   background-color: rgb(135, 215, 235);
   align-items: center;
+  width: 100%;
 }
 
 .barra {
@@ -41,8 +42,8 @@ body {
 
 /* contenido del main*/
 .fotoSeleccion {
-  height: 600px;
-  width: 800px;
+  height: 60%;
+  width: 50%;
   border-radius: 8px;
 }
 
@@ -50,9 +51,8 @@ body {
   color: rgb(104, 98, 39);
   display: flex;
   flex-direction: column;
-  font-size: 30px;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .mainPage {
@@ -87,6 +87,9 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   gap: 20px;
+  position: relative;
+  bottom: 50px;
+  right: 30px;
 }
 
 .footer {
@@ -96,42 +99,59 @@ footer {
   margin-top: 100px;
 }
 
-/* Adaptación para móviles */
-/*header*/
-@media (max-width: 480px) {
+/*version para tablet*/
+/*desde 768px hasta 1023px*/
+@media (max-width: 1023px) {
+  /*header*/
   header {
     justify-content: center;
-    flex-direction: column;
+    width: auto;
   }
   .barra {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
   }
-  .escudo {
-    height: 40px;
-  }
-  .tituloPrincipal {
-    font-size: 30px;
-    text-align: center;
-  }
-}
-/*main*/
-@media (max-width: 480px) {
-  .fotoSeleccion {
+  button {
     width: 100%;
-    height: auto;
+    position: sticky;
   }
-  .mainPage {
-    display: flex;
-    flex-direction: column;
+  .custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.39);
+    background-color: rgb(135, 215, 235);
   }
   #descripcion {
-    font-size: 15px;
+    font-size: 1.5rem;
+  }
+  .bienvenida {
+    font-size: 3rem;
+  }
+  .fotoSeleccion {
+    height: auto;
   }
 }
-/*footer */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .mainPage {
+    flex-direction: column;
+  }
+  .fotoSeleccion {
+    width: 100%;
+  }
+  .bienvenida {
+    font-size: 2rem;
+  }
+  #descripcion {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  .contenedorFooter {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .leyenda {
+    text-align: center;
+  }
   footer {
     display: flex;
     flex-direction: column;
@@ -244,7 +264,7 @@ iframe {
 }
 
 /*pagina responsive*/
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .galeria {
     text-align: center;
   }
@@ -252,14 +272,21 @@ iframe {
     flex-direction: column;
   }
   .imagenes {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 50%;
   }
   .video {
     flex-direction: column;
   }
   iframe {
-    width: 100%;
+    width: 600px;
+    height: 400px;
+  }
+}
+/*para dispositivo movil*/
+@media (max-width: 768px) {
+  iframe {
+    width: 90%;
     height: 300px;
   }
 }
@@ -318,7 +345,37 @@ iframe {
 }
 
 /* Adaptación para móviles */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .jugadores {
+    text-align: center;
+    font-size: 50px;
+  }
+  .plantel {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+/* Adaptación para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #secciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para cada sección */
+    gap: 20px;
+    justify-items: center;
+  }
+  .players {
+    max-width: 250px;
+  }
+  .jugadores {
+    font-size: 60px;
+  }
+  .plantel {
+    font-size: 45px;
+  }
+  .perfil {
+    width: 230px; /* Ajusta el tamaño de las fotos en tablet */
+    height: 250px;
+  }
   .jugadores {
     text-align: center;
     font-size: 50px;
@@ -333,15 +390,21 @@ iframe {
 .partidos {
   font-size: 80px;
   color: rgb(134, 120, 36);
+  text-align: center;
 }
 
 .partidoTitulo {
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(134, 120, 36);
   text-decoration: underline;
-  text-align: center;
   margin-bottom: 20px;
-  display: flex;
+  text-align: center;
+}
+
+/*estilo del titulo*/
+.tituloGrupo {
+  color: rgb(134, 120, 36);
+  font-size: 30px;
 }
 
 /* grid de los grupos*/
@@ -376,24 +439,12 @@ iframe {
   margin-right: 10px;
 }
 
-/* estilo del contenido de los partidos*/
+/*posicion de los grupos*/
 .contenedor {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  max-width: 100%;
+  flex-direction: row;
   position: relative;
-  right: 230px;
-}
-
-#grupo1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.grupo2 {
-  display: flex;
-  flex-direction: column;
+  left: 30px;
 }
 
 /* estilo de los titulos*/
@@ -487,7 +538,7 @@ iframe {
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .partidos {
     text-align: center;
     font-size: 50px;
@@ -499,41 +550,13 @@ iframe {
   .posicionTitulo {
     font-size: 30px;
   }
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    padding: 0 10px;
-  }
-  .celda img {
-    width: 20px;
-    height: 15px;
-    object-fit: cover;
-    margin-right: 5px;
-  }
-  .headGroup {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+  .tituloGrupo {
     text-align: center;
-    width: 100%;
   }
-  .celda {
-    font-size: 10px; /* Reducir el tamaño de fuente */
-  }
-  #grupo1, .grupo2 {
-    display: flex;
-    flex-direction: column;
+  .contenedor {
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 10px;
-  }
-  .grupo {
-    font-weight: bold;
-    font-size: 12px;
+    flex-direction: column;
   }
 }
 .mapa {
@@ -547,7 +570,8 @@ iframe {
   grid-template-columns: 2fr 1fr;
 }
 
-.bloque_1, .bloque_2 {
+.bloque_1,
+.bloque_2 {
   padding: 30px;
   border-radius: 5px;
 }

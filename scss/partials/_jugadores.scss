@@ -1,67 +1,98 @@
 /*jugadores*/
 
 /* Titulos*/
-.jugadores{
+.jugadores {
   font-size: 80px;
-  color:rgb(134, 120, 36)
+  color: rgb(134, 120, 36);
 }
 
-
-
-
-.plantel{
+.plantel {
   font-size: 50px;
-  color:rgb(134, 120, 36);
+  color: rgb(134, 120, 36);
   text-decoration: underline;
 }
 /* posicion de las 3 secciones de fotos*/
-#secciones{
+#secciones {
   display: flex;
   flex-wrap: wrap;
-  gap:20px;
+  gap: 20px;
   justify-content: center;
   margin-top: 50px;
-  
 }
 /* posicion de las fotos*/
-.players{
+.players {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 300px
+  max-width: 300px;
 }
 /* estilo de las fotos*/
-.perfil{
-  width: 300px; 
+.perfil {
+  width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 /* Estilo de la descripcion de las fotos*/
-.datos{
-  list-style: none; 
+.datos {
+  list-style: none;
   padding: 0;
   margin: 10px 0 0 0;
-  font-size: 14px; 
+  font-size: 14px;
   display: flex;
   flex-direction: column;
 }
 /* posisicion entre datos y listas*/
 .datos li {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 /* Adaptación para móviles */
 
-
-@media (max-width:480px){
-  .jugadores{
-      text-align: center;
-      font-size: 50px;
+@media (max-width: 768px) {
+  .jugadores {
+    text-align: center;
+    font-size: 50px;
   }
-  .plantel{
-      font-size: 40px;
-      text-align: center;
+  .plantel {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+/* Adaptación para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #secciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para cada sección */
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .players {
+    max-width: 250px;
+  }
+
+  .jugadores {
+    font-size: 60px;
+  }
+
+  .plantel {
+    font-size: 45px;
+  }
+
+  .perfil {
+    width: 230px; /* Ajusta el tamaño de las fotos en tablet */
+    height: 250px;
+  }
+
+  .jugadores {
+    text-align: center;
+    font-size: 50px;
+  }
+  .plantel {
+    font-size: 40px;
+    text-align: center;
   }
 }

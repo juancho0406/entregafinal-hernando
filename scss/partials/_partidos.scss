@@ -3,19 +3,25 @@
 /* titulos*/
 .partidos{
   font-size: 80px;
-  color:rgb(134, 120, 36)
+  color:rgb(134, 120, 36);
+  text-align: center;
 }
 
 .partidoTitulo{
-  font-size: 50px;
+  font-size: 40px;
   color:rgb(134, 120, 36);
   text-decoration: underline;
+  margin-bottom: 20px;  
   text-align: center;
-  margin-bottom: 20px;
-  display: flex;
   
 }
 
+/*estilo del titulo*/
+
+.tituloGrupo{
+  color:rgb(134, 120, 36);
+  font-size: 30px
+}
 
 
 /* grid de los grupos*/
@@ -52,24 +58,15 @@
   object-fit: cover;
   margin-right: 10px;
 }
-/* estilo del contenido de los partidos*/
+
+/*posicion de los grupos*/
+
+
 .contenedor{
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  max-width: 100%;
+  flex-direction: row;
   position: relative;
-  right: 230px;
-}
-
-#grupo1{
-  display: flex;
-  flex-direction: column;
-}
-
-.grupo2{
-  display: flex;
-  flex-direction: column;
+  left:30px
 }
 
 
@@ -165,7 +162,7 @@ margin-top: 50px;
 
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .partidos{
     text-align: center;
     font-size: 50px;
@@ -177,49 +174,14 @@ margin-top: 50px;
   .posicionTitulo{
       font-size: 30px;
   }
+
+  .tituloGrupo{
+    text-align: center;
+  }
   .contenedor{
-     flex-direction: column;
      align-items: center;
      justify-content: center;
-     gap:20px;
-     width:100%;   
-     padding: 0 10px
-      
+     flex-direction: column;
   }
-  
-  .celda img {
-      width: 20px; 
-      height: 15px; 
-      object-fit: cover;
-      margin-right: 5px;
-  }
-
-  .headGroup{
-      display: grid;
-      grid-template-columns: repeat(7, 1fr); 
-      gap: 5px; 
-      text-align: center;
-      width: 100%; 
-      
-  }
-
-  .celda{
-      font-size: 10px; /* Reducir el tamaño de fuente */
-  }
-  
-  #grupo1, .grupo2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 10px;
-  }
-
-  .grupo {
-      font-weight: bold;
-      font-size: 12px;
-  }
-
   
 }
