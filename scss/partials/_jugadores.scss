@@ -1,14 +1,14 @@
 /*jugadores*/
 
+
 /* Titulos*/
 .jugadores {
   font-size: 80px;
-  color: rgb(134, 120, 36);
 }
 
 .plantel {
   font-size: 50px;
-  color: rgb(134, 120, 36);
+  color: $colorTitulo;
   text-decoration: underline;
 }
 /* posicion de las 3 secciones de fotos*/
@@ -33,7 +33,9 @@
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
+  
 }
+
 /* Estilo de la descripcion de las fotos*/
 .datos {
   list-style: none;

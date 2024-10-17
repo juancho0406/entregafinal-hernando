@@ -3,13 +3,13 @@
 /* titulos*/
 .partidos{
   font-size: 80px;
-  color:rgb(134, 120, 36);
+  color:$colorTitulo;
   text-align: center;
 }
 
 .partidoTitulo{
   font-size: 40px;
-  color:rgb(134, 120, 36);
+  color:$colorTitulo;
   text-decoration: underline;
   margin-bottom: 20px;  
   text-align: center;
@@ -19,7 +19,7 @@
 /*estilo del titulo*/
 
 .tituloGrupo{
-  color:rgb(134, 120, 36);
+  color:$colorTitulo;
   font-size: 30px
 }
 
@@ -118,7 +118,7 @@ margin-top: 50px;
 }
 
 .fases{
-  color:rgb(134, 120, 36);
+  color:$colorTitulo;
   text-decoration: underline;
   font-size: 30px;
 }

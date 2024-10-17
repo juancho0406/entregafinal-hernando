@@ -3,12 +3,24 @@
   padding: 0;
 }
 
+/*variables*/
+
+
+@mixin anclas{
+  color: white;
+  font-size: 30px;
+}
+
+$colorTitulo: rgb(134, 120, 36);
+$colorheader:rgb(135, 215, 235);
+
+
 /*contenido del header*/
 
 header {
   display: flex;
   min-height: 100px;
-  background-color: rgb(135, 215, 235);
+  background-color: $colorheader;
   align-items: center;
   width: 100%;
 }
@@ -22,14 +34,13 @@ header {
 }
 
 .tituloPrincipal {
-  color: rgb(134, 120, 36);
+  color: $colorTitulo;
 }
 
 /* contenido del nav*/
 
 .nav-link {
-  color: white;
-  font-size: 30px;
+ @include anclas
 }
 
 /* imagen de fondo y tipo de letra*/
@@ -48,7 +59,7 @@ body {
   border-radius: 8px;
 }
 #descripcion {
-  color: rgb(104, 98, 39);
+  color: $colorTitulo;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -62,14 +73,14 @@ body {
 }
 .bienvenida {
   font-size: 50px;
-  color: rgb(104, 94, 39);
+  color: $colorTitulo;
 }
 
 /* footer*/
 
 footer {
   min-height: 200px;
-  background-color: rgb(135, 215, 235);
+  background-color: $colorheader;
   margin-top: 30px;
 }
 
@@ -124,7 +135,7 @@ footer {
     top: 0; 
     z-index: 1000; 
     box-shadow:rgba(0, 0, 0, 0.39); 
-    background-color: rgb(135, 215, 235) ;
+    background-color: $colorheader ;
   }
 
    #descripcion{

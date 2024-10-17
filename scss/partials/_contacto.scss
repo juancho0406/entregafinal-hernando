@@ -1,6 +1,6 @@
 .mapa {
-  height: 400px;
-  width: 600px;
+  max-height: 400px;
+  max-width: 600px;
 }
 
 .contenedor {
@@ -35,16 +35,18 @@ p {
 
 /* Adaptación para móviles */
 
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .contenedor {
     grid-template-areas:
       "bloque_1"
       "bloque_2";
     grid-template-columns: 1fr;
+    margin-right: 30px;
+    text-align: center;
   }
 
   .mapa {
-    height: 200px;
+    height: 100%;
     width: 100%;
   }
 
@@ -66,4 +68,10 @@ p {
   .btn {
     align-items: center;
   }
+  h3{
+  text-align: center;
+  font-size: 20px;
+  margin-right: 15px;
 }
+}
+

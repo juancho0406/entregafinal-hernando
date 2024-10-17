@@ -3,7 +3,7 @@
 /* titulo*/
 .galeria {
   font-size: 80px;
-  color: rgb(134, 120, 36);
+  color: $colorTitulo;
 }
 
 /* posicion de las fotos*/
@@ -16,9 +16,12 @@
 }
 
 /* tamaño de las fotos*/
-.imagenes {
-  width: 500px;
+
+#imagenes {
+  width: 480px;
   height: 400px;
+  border-radius: 8px;
+  margin-right: 5px;
 }
 /* posicion de los videos*/
 .video {
@@ -38,7 +41,9 @@
 /* tamaño del frame*/
 iframe {
   max-width: 100%;
+  margin-right: 5px
 }
+
 
 /* lugar del caption*/
 .caption {
@@ -94,7 +99,7 @@ iframe {
   #fotos {
     flex-direction: column;
   }
-  .imagenes {
+  #imagenes {
     width: 80%;
     height: 50%;
   }
