@@ -3,13 +3,24 @@
 
 /* Titulos*/
 .jugadores {
-  font-size: 80px;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+  color: $colorTitulo;
+  margin-top: 30px;
+}
+
+.jugadores:hover{
+  color:$colorHover;
 }
 
 .plantel {
-  font-size: 50px;
+  font-size: 40px;
   color: $colorTitulo;
   text-decoration: underline;
+  text-align: center;
+  margin-top: 30px;
+
 }
 /* posicion de las 3 secciones de fotos*/
 #secciones {

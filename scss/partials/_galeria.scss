@@ -4,8 +4,14 @@
 .galeria {
   font-size: 80px;
   color: $colorTitulo;
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: underline;
 }
 
+.galeria:hover{
+  color:$colorHover;
+}
 /* posicion de las fotos*/
 
 #fotos {

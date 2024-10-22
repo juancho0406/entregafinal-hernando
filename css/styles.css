@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
 /*variables*/
@@ -9,9 +10,9 @@
 header {
   display: flex;
   min-height: 100px;
-  background-color: rgb(135, 215, 235);
-  align-items: center;
+  background-color: rgb(173, 216, 230);
   width: 100%;
+  justify-content: space-between;
 }
 
 .barra {
@@ -23,14 +24,19 @@ header {
   height: 50px;
 }
 
-.tituloPrincipal {
+#tituloPrincipal {
   color: rgb(134, 120, 36);
 }
 
 /* contenido del nav*/
 .nav-link {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
 }
 
 /* imagen de fondo y tipo de letra*/
@@ -71,7 +77,7 @@ body {
 /* footer*/
 footer {
   min-height: 200px;
-  background-color: rgb(135, 215, 235);
+  background-color: rgb(173, 216, 230);
   margin-top: 30px;
 }
 
@@ -111,16 +117,8 @@ footer {
   .barra {
     flex-direction: column;
   }
-  button {
-    width: 100%;
-    position: sticky;
-  }
-  .custom-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: rgba(0, 0, 0, 0.39);
-    background-color: rgb(135, 215, 235);
+  header {
+    justify-content: space-between;
   }
   #descripcion {
     font-size: 1.5rem;
@@ -133,6 +131,22 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  /*personalizacion del boron*/
+  .custom-navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .nav-item {
+    margin-bottom: 10px;
+  }
+  header {
+    justify-content: space-between;
+  }
+  button {
+    width: 100%;
+    position: sticky;
+  }
   .mainPage {
     flex-direction: column;
   }
@@ -177,6 +191,13 @@ footer {
 .galeria {
   font-size: 80px;
   color: rgb(134, 120, 36);
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.galeria:hover {
+  color: blue;
 }
 
 /* posicion de las fotos*/
@@ -297,13 +318,23 @@ iframe {
 /*jugadores*/
 /* Titulos*/
 .jugadores {
-  font-size: 80px;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(134, 120, 36);
+  margin-top: 30px;
+}
+
+.jugadores:hover {
+  color: blue;
 }
 
 .plantel {
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(134, 120, 36);
   text-decoration: underline;
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* posicion de las 3 secciones de fotos*/
@@ -388,185 +419,138 @@ iframe {
     text-align: center;
   }
 }
-/*partidos*/
-/* titulos*/
-.partidos {
-  font-size: 80px;
-  color: rgb(134, 120, 36);
-  text-align: center;
-}
-
-.partidoTitulo {
-  font-size: 40px;
-  color: rgb(134, 120, 36);
-  text-decoration: underline;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/*estilo del titulo*/
-.tituloGrupo {
-  color: rgb(134, 120, 36);
-  font-size: 30px;
-}
-
-/* grid de los grupos*/
-.headGroup {
+/*para hacer las colunas de los cuadros*/
+.cabecera {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  width: 100px;
+  grid-template-columns: 200px repeat(6, 80px);
   text-align: center;
 }
 
-.grupo {
-  font-weight: bold;
-  padding: 20px;
-  border-radius: 4px;
-}
-
-/* estilo del contenido de las celdas*/
-.celda {
-  padding: 10px;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.celda img {
-  width: 30px;
-  height: 20px;
-  object-fit: cover;
+/*el borde de los cuadros*/
+/*distancia de la bandera con el nombre del equipo*/
+.bandera {
   margin-right: 10px;
 }
 
-/*posicion de los grupos*/
-.contenedor {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  left: 30px;
+.border {
+  border: 1px solid black !important;
 }
 
-/* estilo de los titulos*/
-.titulos_espaciados {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  position: relative;
+/*remarca los ganadores de cada grupo*/
+#winner {
+  background-color: gold;
 }
 
-/* grid de los partidos*/
-.cabeza {
-  display: grid;
-  grid-template-columns: 50px 50px 300px 100px;
-  border: 1px solid black;
+/*distancia de la bandera con el nombre del equipo de la parte derecha en la seccion de partidos*/
+.banderaDerecha {
+  margin-left: 10px;
+}
+
+/*acomodar los grupos 1 y dos entre si */
+.grupoContenedor {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+/*para darle estilo al titulo de los grupos*/
+.numeroGrupos {
   text-align: center;
 }
 
-/* estilo de las celdas*/
-.columna-1 {
-  border: 1px solid black;
+/*para armar el grupo de los partidos*/
+.estiloPartidos {
   display: grid;
-  font-weight: bold;
+  grid-template-columns: 80px 80px 350px 150px;
   text-align: center;
 }
 
-.agrupacion {
-  border: 1px solid black;
-  display: grid;
+/*estilo de los textos*/
+.partidoTitulo {
+  margin-top: 30px;
+  color: rgb(134, 120, 36);
+  font-size: 40px;
+  text-decoration: underline;
 }
 
-.contenedor2 {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-/**titulo fase final*/
-#fasefinal {
-  margin-top: 50px;
-}
-
-/**seccion de los cuadros de eliminatorias*/
-.cuadroFinal {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  right: 125px;
-  margin-top: 50px;
-}
-
-.fases {
+/*estilo del titulo PARTIDOS*/
+.partidos {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 30px;
   color: rgb(134, 120, 36);
   text-decoration: underline;
-  font-size: 30px;
 }
 
-/**seccion de los cuadros finales*/
-.cuadrosFinales {
+.partidos:hover {
+  color: blue;
+}
+
+/*para hacer las columnas de los cuadros de Fase Final*/
+.fases {
   display: grid;
-  grid-template-columns: 150px 30px;
-  border: 1px solid black;
+  grid-template-columns: 150px 50px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.cuartos, .Semifinal, .final {
+/*para acomdar los cuadros*/
+.faseFinal {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  border-right: none;
-  max-width: 200px;
-  margin-top: 15px;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
-.Semifinal {
+/*para acomodar el tercer puesto*/
+.tercerPuesto {
   display: flex;
-  position: relative;
-  left: 60px;
-  margin-top: 15px;
+  justify-content: center;
 }
 
-.final {
-  display: flex;
-  position: relative;
-  top: 70px;
+#tituloTercero {
+  text-align: center;
 }
 
-.todosCuadros {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  right: 90px;
-}
-
-/* Estilos para dispositivos móviles */
+/*pagina responsive*/
 @media (max-width: 1023px) {
-  .partidos {
+  .cabecera {
+    grid-template-columns: 100px repeat(6, 40px);
+  }
+  .estiloPartidos {
+    grid-template-columns: 50px 50px 200px 75px;
+  }
+}
+@media (max-width: 768px) {
+  .grupoContenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cabecera {
+    grid-template-columns: 100px repeat(6, 30px);
+    font-size: 15px;
+  }
+  .estiloPartidos {
+    grid-template-columns: 30px 30px 200px 50px;
+    font-size: 10px;
+  }
+  .faseFinal {
+    gap: 10px;
     text-align: center;
-    font-size: 50px;
   }
   .partidoTitulo {
-    text-align: center;
-    font-size: 40px;
-  }
-  .posicionTitulo {
-    font-size: 30px;
-  }
-  .tituloGrupo {
+    font-size: 20px;
     text-align: center;
   }
-  .contenedor {
-    align-items: center;
+  .fases {
+    grid-template-columns: 80px 20px;
+    font-size: 10px;
+  }
+  .tercerPuesto {
+    display: flex;
     justify-content: center;
-    flex-direction: column;
   }
 }
-.mapa {
-  max-height: 400px;
-  max-width: 600px;
-}
-
 .contenedor {
   display: grid;
   grid-template-areas: "bloque_1" "bloque_2";
@@ -579,6 +563,10 @@ iframe {
   border-radius: 5px;
 }
 
+.bloque_2 {
+  margin-top: 120px;
+}
+
 .comentario {
   width: 300px;
   height: 200px;
@@ -588,9 +576,15 @@ button {
   margin-top: 20px;
 }
 
-h2 {
+.contacto {
   color: rgb(134, 120, 36);
   font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.contacto:hover {
+  color: blue;
 }
 
 p {
@@ -628,6 +622,9 @@ p {
     text-align: center;
     font-size: 20px;
     margin-right: 15px;
+  }
+  .bloque_2 {
+    margin-top: 0px;
   }
 }
 

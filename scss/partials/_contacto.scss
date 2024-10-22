@@ -1,7 +1,4 @@
-.mapa {
-  max-height: 400px;
-  max-width: 600px;
-}
+
 
 .contenedor {
   display: grid;
@@ -15,6 +12,10 @@
   border-radius: 5px;
 }
 
+.bloque_2{
+  margin-top: 120px;
+}
+
 .comentario {
   width: 300px;
   height: 200px;
@@ -24,9 +25,14 @@ button {
   margin-top: 20px;
 }
 
-h2 {
-  color: rgb(134, 120, 36);
+.contacto {
+  color: $colorTitulo;
   font-size: 50px;
+  text-align: center;
+  text-decoration: underline
+}
+.contacto:hover{
+  color:blue;
 }
 
 p {
@@ -73,5 +79,7 @@ p {
   font-size: 20px;
   margin-right: 15px;
 }
+.bloque_2{
+  margin-top: 0px;
 }
-
+}

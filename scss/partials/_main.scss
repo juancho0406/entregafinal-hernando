@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
 /*variables*/
@@ -8,22 +9,26 @@
 
 @mixin anclas{
   color: white;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 $colorTitulo: rgb(134, 120, 36);
-$colorheader:rgb(135, 215, 235);
+$colorheader:rgb(173, 216, 230);
+$colorHover: blue;
 
 
 /*contenido del header*/
+
+
 
 header {
   display: flex;
   min-height: 100px;
   background-color: $colorheader;
-  align-items: center;
   width: 100%;
+  justify-content: space-between
 }
+
 
 .barra {
   display: flex;
@@ -33,15 +38,26 @@ header {
   height: 50px;
 }
 
-.tituloPrincipal {
+#tituloPrincipal {
   color: $colorTitulo;
 }
 
 /* contenido del nav*/
 
 .nav-link {
- @include anclas
+ @include anclas;
 }
+
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+
+
 
 /* imagen de fondo y tipo de letra*/
 body {
@@ -124,19 +140,12 @@ footer {
     flex-direction: column;
     
    }
-   
-   button{
-    width: 100%;
-    position: sticky
-   }
-
-   .custom-navbar {
-    position: sticky;
-    top: 0; 
-    z-index: 1000; 
-    box-shadow:rgba(0, 0, 0, 0.39); 
-    background-color: $colorheader ;
+ 
+   header{
+    justify-content: space-between;
   }
+
+
 
    #descripcion{
     font-size: 1.5rem;
@@ -153,7 +162,30 @@ footer {
 }
 
 
+
+
 @media (max-width:768px){
+
+/*personalizacion del boron*/
+
+  .custom-navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important; 
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+  }
+
+  header{
+    justify-content: space-between;
+  }
+
+  button{
+    width: 100%;
+    position: sticky
+   }
 
   .mainPage{
     flex-direction: column;
