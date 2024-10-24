@@ -19,7 +19,12 @@
 .comentario {
   width: 300px;
   height: 200px;
+  padding: 5px;         /* Añade un pequeño espacio interno */
+  box-sizing: border-box; /* Para que el padding no afecte el tamaño */
+  text-align: left;      /* Alinea el texto a la izquierda */
+  vertical-align: top;   /* No necesario con textarea, ya que inicia desde la parte superior */
 }
+
 
 button {
   margin-top: 20px;
@@ -31,9 +36,7 @@ button {
   text-align: center;
   text-decoration: underline
 }
-.contacto:hover{
-  color:blue;
-}
+
 
 p {
   margin-top: 20px;

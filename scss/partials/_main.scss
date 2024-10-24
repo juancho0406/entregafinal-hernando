@@ -26,7 +26,7 @@ header {
   min-height: 100px;
   background-color: $colorheader;
   width: 100%;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 
@@ -70,9 +70,10 @@ body {
 /* contenido del main*/
 
 .fotoSeleccion {
-  height: 60%;
-  width: 50%;
+  width: 40%;
   border-radius: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 #descripcion {
   color: $colorTitulo;
@@ -80,22 +81,26 @@ body {
   flex-direction: column;
   text-align: center;
   font-size: 35px;
+  gap:10px
 }
 .mainPage {
   flex-direction: row;
   display: flex;
-  position: relative;
-  top: 20px;
+
 }
 .bienvenida {
-  font-size: 50px;
+  font-size: 40px;
   color: $colorTitulo;
 }
 
+.paginaCentral{
+  height: 500px;
+  margin-top: 150px;
+}
 /* footer*/
 
 footer {
-  min-height: 200px;
+  min-height: 300px;
   background-color: $colorheader;
   margin-top: 30px;
 }
@@ -115,7 +120,7 @@ footer {
   gap: 20px;
   position: relative;
   bottom: 50px;
-  right: 30px;
+  right: 40px;
 }
 .footer {
   display: flex;
@@ -145,14 +150,17 @@ footer {
     justify-content: space-between;
   }
 
+  .paginaCentral{
+   margin-top: 150px;
 
+  }
 
    #descripcion{
-    font-size: 1.5rem;
+    font-size: 25px;
    }
 
    .bienvenida{
-    font-size: 3rem;
+    font-size: 30px;
    }
    .fotoSeleccion{
     height: auto;
@@ -187,11 +195,18 @@ footer {
     position: sticky
    }
 
+  .paginaCentral{
+         margin-bottom: 100px;
+         margin-top: 100px;
+   }
   .mainPage{
     flex-direction: column;
+    text-align: center;
+
   }
   .fotoSeleccion{
-    width: 100%;
+    width: 90%;
+    margin-left: 20px;
     
   }
 
@@ -215,6 +230,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 350px;
 }
 
 .iconos {
